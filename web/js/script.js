@@ -36,6 +36,7 @@ function row(listado, p){
 function loaded(event){
     list();
     document.getElementById("pic").addEventListener("click",hidePop);
+    addEventSeats();
 }
 
 function displayPop(){
@@ -46,6 +47,20 @@ function displayPop(){
 function hidePop(){
     document.getElementById("over").classList.remove("overlay");
     document.getElementById("pop").style.display='none';
+}
+
+function colorChanger(e){
+    if(!e.classList.contains("occupied")){ 
+        e.classList.add("occupied");
+    } 
+    else e.classList.remove("occupied");
+}
+
+function addEventSeats(){
+    container = document.querySelectorAll(".seat");
+    container.forEach(box =>
+        box.addEventListener("click",(b)=>{colorChanger(box);})
+    );
 }
 
 document.addEventListener("DOMContentLoaded", loaded);

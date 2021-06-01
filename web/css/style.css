@@ -81,7 +81,7 @@ img {
 }
 
 .seat.occupied {
-  background-color: #fff;
+  background-color: blue;
 }
 
 .seat:nth-of-type(2) {
@@ -128,12 +128,12 @@ img {
 }
 
 .screen {
-  background-color: #fff;
+  background-color: black;
   height: 70px;
-  width: 100%;
+  width: 60%;
   margin: 15px 0;
   transform: rotateX(-45deg);
-  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+  box-shadow: 0 3px 10px rgb(0, 0, 0);
 }
 
 p.text {
