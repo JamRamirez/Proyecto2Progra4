@@ -28,12 +28,24 @@ function row(listado, p){
     peliImg.setAttribute("class", "icon");
     
     //div.append(nombreLabel, peliImg);
+    peliImg.addEventListener("click",displayPop);
     div.append(peliImg);
     listado.appendChild(div);
 }
 
 function loaded(event){
     list();
+    document.getElementById("pic").addEventListener("click",hidePop);
+}
+
+function displayPop(){
+    document.getElementById("over").className = "overlay";
+    document.getElementById("pop").style.display='block';
+}
+
+function hidePop(){
+    document.getElementById("over").classList.remove("overlay");
+    document.getElementById("pop").style.display='none';
 }
 
 document.addEventListener("DOMContentLoaded", loaded);
